@@ -155,7 +155,7 @@
    	// update the toggle button 		
    	toggleButton.toggleClass('is-clicked'); 
    	// fadeout the navigation panel
-   	nav.fadeOut();   		
+   	//nav.fadeOut();   		
    	     
   	});
 

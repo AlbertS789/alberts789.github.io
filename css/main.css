@@ -1029,7 +1029,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	color: #7d7d7d;
 }
 .section-intro {
-	max-width: 700px;
+	max-width: 940px;/*700px;*/
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -1099,10 +1099,10 @@ header .row {
 header .top-bar {
 	display: block;
 	background: #000000;
-	min-width: 20px;/*220px;*/
+	min-width: 100%;/*220px;*/
 	min-height: 65px;
 	position: absolute;
-	left: 90px;
+	/*left: 90px;*/
 	top: 0;
 }
 header .logo {
@@ -1226,25 +1226,30 @@ header .logo a {
 	font-family: "poppins-medium", sans-serif;
 	font-size: 1.5rem;
 	position: absolute;
-	top: 100%;
+	/*top: 100%;*/
 	left: 0;
 }
 
 /* dropdown nav */
 .main-navigation {
 	background: #000000;
-	padding: 24px 30px 42px;
+	padding: 15px 30px 10px; /*24px 30px 42px;*/
 	margin: 0;
 	width: 100%;
 	height: auto;
 	clear: both;
-	display: none;
+	display: flex; /*none;*/
+	align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+	margin: 0;
 }
 .main-navigation > li {
-	display: block;
+	display: inline-block; /*block<*/
 	height: auto;
 	text-align: left;
 	padding: 0;
+	flex: 0 1 auto;
 }
 .main-navigation li a {
 	display: block;
@@ -1379,6 +1384,7 @@ header .logo a {
 	color: #FFFFFF !important;
 	border-color: rgba(255, 255, 255, 0.3);
 	height: 6rem !important;
+	width: 20rem;
 	line-height: 5.4rem !important;
 	padding: 0 3.5rem 0 3rem !important;
 	margin-top: .6rem;
@@ -1521,7 +1527,7 @@ header .logo a {
 .about-content {
 	position: relative;
 	text-align: left;
-	max-width: 850px;
+	max-width: 1040px;/*850px;*/
 	margin-bottom: 3.6rem;
 }
 .about-content h3 {
@@ -1554,6 +1560,87 @@ header .logo a {
 	line-height: 1;
 }
 .about-content .skill-bars {
+	margin-top: 6rem;
+}
+
+.button-section {
+	text-align: center;
+}
+.button-section .button {
+	width: 250px;
+}
+.button-section [class*="col-"] .button:first-child {
+	margin-right: 4rem;
+}
+
+/** 
+ * ===================================================================
+ * 12. blog - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+ #blog {
+	background: #FFFFFF;
+	padding-top: 12rem;
+	padding-bottom: 15rem;
+}
+#blog .section-intro {
+	margin-bottom: 3rem;
+}
+
+.blog-intro-info {
+	margin-top: 4.2rem;
+	margin-right: -30px;
+	margin-left: -30px;
+}
+.blog-intro-info img {
+	height: 9rem;
+	width: 9rem;
+	border-radius: 50%;
+	margin: .9rem 0 0 0;
+	float: left;
+}
+.blog-intro-info .lead {
+	text-align: left;
+	padding-left: 13rem;
+}
+
+.blog-content {
+	position: relative;
+	text-align: left;
+	max-width: 1040px;/*850px;*/
+	margin-bottom: 3.6rem;
+}
+.blog-content h3 {
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: .25rem;
+}
+.blog-content .info-list {
+	list-style: none;
+	margin-left: 0;
+}
+.blog-content .info-list li {
+	padding: 0 0 1.5rem 0;
+	margin-bottom: .6rem;
+}
+.blog-content .info-list li strong {
+	font-family: "poppins-bold", sans-serif;
+	color: #313131;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	font-size: 1.5rem;
+	line-height: 3rem;
+}
+.blog-content .info-list li span {
+	display: block;
+	font-family: "poppins-regular", sans-serif;
+	color: #888888;
+	font-size: 1.5rem;
+	line-height: 1;
+}
+.blog-content .skill-bars {
 	margin-top: 6rem;
 }
 
@@ -1793,7 +1880,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #portfolio {
-	background: #FFFFFF;
+	/*background: #FFFFFF;*/
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 }
@@ -1870,6 +1957,15 @@ header .logo a {
 	transform: scale(1.05);
 }
 
+#portfolio .folio-title.custom {
+	color: black;
+    padding: 0;
+}
+
+#portfolio .folio-types.custom {
+	color: black;
+}
+
 /**
  * responsive:
  * portfolio
@@ -1896,7 +1992,7 @@ header .logo a {
  * ------------------------------------------------------------------
  */
 .popup-modal {
-	max-width: 550px;
+	max-width: 750px;/*550px;*/
 	background: #FFFFFF;
 	position: relative;
 	margin: 0 auto;
@@ -1909,6 +2005,7 @@ header .logo a {
 }
 .popup-modal .description-box {
 	padding: 1.8rem 3.6rem 3rem;
+	margin: 4rem;
 }
 .popup-modal .description-box h4 {
 	font-family: "poppins-bold", sans-serif;
@@ -2600,3 +2697,18 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+a.custom-button{
+	font-size: 1.2rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+p.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 7;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+}
+
+
