@@ -8,7 +8,7 @@ $(function () {
 
         // use http://jsonviewer.stack.hu/ to check json file easier
         $.get(
-	     'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Facuity-learning'
+	     'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Facuity-learning',
             //'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Facquisition-of-learning',
             //'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40Al123',
             data,
